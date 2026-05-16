@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImperioBudin | Budines Artesanales</title>
-    <!-- Importamos una fuente moderna y amigable -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>ImperioBudin | Budines Artesanales con Sabor Casero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* ================= ESTILOS GENERALES ================= */
+        /* ================= ESTILOS GENERALES Y GAMA CROMÁTICA ================= */
         * {
             margin: 0;
             padding: 0;
@@ -15,89 +14,101 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background-color: #fcf9f2; /* Color crema suave para dar sensación de pastelería */
-            color: #333;
+            /* FONDO GENERAL: Tono lino/arena pastel suave que descansa la vista */
+            background-color: #f1eae1;
+            /* MARRÓN OSCURO para texto general */
+            color: #382b1f;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        strong {
+            color: #70553f; 
         }
         
-        /* ================= ENCABEZADO (HERO) ================= */
+        /* ================= ENCABEZADO (HERO) CON CORRECCIÓN DE CONTRASTE ================= */
         .hero {
             position: relative;
             height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Imagen de fondo de panadería/harina */
-            background: url('https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            /* Mantenemos la imagen potente del amasado artesanal */
+            background: url('https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
         }
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Fondo medio transparente oscuro */
+            /* SUPERPOSICIÓN OSCURA CÁLIDA: Elimina el efecto "muy blanco" y da un contraste premium */
+            background: rgba(45, 34, 24, 0.65); 
         }
         .hero-content {
             position: relative;
             z-index: 1;
             text-align: center;
-            color: #fff;
             padding: 0 20px;
         }
         .hero-content h1 {
-            font-size: 4rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-            color: #ffca28; /* Tono dorado/budín */
+            font-size: 5rem;
+            letter-spacing: 1px;
+            /* COLOR CLARO (HUESO) para destacar impecablemente sobre el fondo oscuro */
+            color: #fcfaf4;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         .hero-content p {
-            font-size: 1.5rem;
-            margin-top: 10px;
+            font-size: 1.6rem;
+            margin-top: 15px;
+            font-weight: 300;
+            color: #fcfaf4;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
         }
 
         /* ================= SOBRE NOSOTROS ================= */
         .about-section {
-            padding: 60px 20px;
-            max-width: 800px;
+            padding: 70px 20px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: center;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transform: translateY(-40px); /* Sube la caja sobre el hero un poco */
+            /* Fondo de la tarjeta sutilmente más claro para despegar del fondo general */
+            background-color: #fdfbf7;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(56, 43, 31, 0.05);
+            transform: translateY(-50px);
             position: relative;
             z-index: 2;
         }
         .about-section h2 {
-            color: #d84315; /* Tono cálido de horno */
-            margin-bottom: 20px;
-            font-size: 2rem;
+            color: #70553f;
+            margin-bottom: 25px;
+            font-size: 2.6rem;
         }
         .about-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
+            font-size: 1.15rem;
+            line-height: 1.9;
         }
 
-        /* ================= CARRUSEL DE PRODUCTOS ================= */
+        /* ================= CARRUSEL DE PRODUCTOS (VERTICAL) ================= */
         .products-section {
             padding: 40px 20px;
             text-align: center;
         }
         .products-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            color: #333;
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+            color: #70553f;
         }
         .carousel-container {
-            max-width: 900px;
+            max-width: 450px; 
             margin: 0 auto;
-            overflow: hidden; /* Oculta lo que sale del borde */
+            overflow: hidden;
             position: relative;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(56, 43, 31, 0.1);
         }
         .carousel-track {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.6s ease-in-out;
         }
         .carousel-slide {
             min-width: 100%;
@@ -105,7 +116,7 @@
         }
         .carousel-slide img {
             width: 100%;
-            height: 400px;
+            height: 580px; 
             object-fit: cover;
             display: block;
         }
@@ -113,18 +124,18 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            font-size: 1.5rem;
+            background: rgba(241, 234, 225, 0.95);
+            padding: 20px;
+            font-size: 1.6rem;
             font-weight: 600;
-            color: #d84315;
+            color: #70553f;
+            font-family: 'Playfair Display', serif;
         }
-        /* Botones del carrusel */
         .btn-carousel {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
+            background: rgba(56, 43, 31, 0.6);
             color: white;
             border: none;
             cursor: pointer;
@@ -133,68 +144,80 @@
             border-radius: 50%;
             transition: 0.3s;
         }
-        .btn-carousel:hover { background: #d84315; }
-        .btn-prev { left: 10px; }
-        .btn-next { right: 10px; }
+        .btn-carousel:hover { 
+            background: #382b1f;
+        }
+        .btn-prev { left: 15px; }
+        .btn-next { right: 15px; }
 
-        /* ================= FOOTER Y CONTACTO ================= */
+        /* ================= FOOTER Y ENLACES ARMÓNICOS ================= */
         .footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #e5d5c5;
+            color: #382b1f;
             text-align: center;
-            padding: 50px 20px;
-            margin-top: 40px;
+            padding: 60px 20px;
+            margin-top: 60px;
         }
         .delivery-msg {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
         .delivery-msg span {
-            color: #ffca28;
-            font-weight: bold;
+            color: #382b1f;
+            font-weight: 600;
         }
         .contact-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         .btn {
             text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 1.1rem;
+            padding: 18px 35px;
+            border-radius: 35px;
+            font-size: 1.15rem;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(56, 43, 31, 0.15);
         }
         .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
+            background-color: #382b1f;
+            color: #fcfaf4;
         }
         .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
+            background-color: transparent;
+            border: 2px solid #70553f;
+            color: #70553f;
+            padding: 16px 33px;
+        }
+        .btn-instagram:hover {
+            background-color: #70553f;
+            color: #fcfaf4;
         }
         
         /* ================= RESPONSIVE ================= */
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
-            .carousel-slide img { height: 300px; }
+            .hero-content h1 { font-size: 3.2rem; }
+            .hero-content p { font-size: 1.2rem; }
+            .about-section { padding: 40px 15px; transform: translateY(-20px); }
+            .about-section h2, .products-section h2 { font-size: 2.1rem; }
+            .carousel-container { max-width: 85%; }
+            .carousel-slide img { height: 480px; }
             .contact-buttons { flex-direction: column; align-items: center; }
-            .btn { width: 100%; justify-content: center; max-width: 300px; }
+            .btn { width: 100%; justify-content: center; max-width: 320px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- SECCIÓN: Encabezado -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -203,37 +226,31 @@
         </div>
     </header>
 
-    <!-- SECCIÓN: Sobre Nosotros -->
     <section class="about-section">
         <h2>Nuestra Historia</h2>
-        <p>Somos dos estudiantes con un gran sueño y mucha pasión por la pastelería. <strong>ImperioBudin</strong> nació con el objetivo de acompañar tus mates, tés y cafés de todos los días, mientras nosotros generamos ingresos para costear nuestras carreras universitarias. Cada budín que preparamos está horneado con dedicación, utilizando los mejores ingredientes y un toque de amor casero. ¡Gracias por confiar en nosotros y ser parte de nuestro camino!</p>
+        <p><strong>ImperioBudin</strong> nació con el objetivo de acompañar tus mates, tés y cafés de todos los días, mientras nosotros generamos ingresos para costear nuestras carreras universitarias. Cada budín que preparamos está horneado con dedicación, utilizando los mejores ingredientes y un toque de amor casero. ¡Gracias por confiar en nosotros y ser parte de nuestro camino!</p>
     </section>
 
-    <!-- SECCIÓN: Nuestros Sabores (Carrusel) -->
     <section class="products-section">
         <h2>Nuestras Variedades</h2>
         <div class="carousel-container">
             <div class="carousel-track" id="track">
                 
-                <!-- Slide 1: Vainilla -->
                 <div class="carousel-slide">
                     <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=800&q=80" alt="Budín de Vainilla">
                     <div class="slide-info">Vainilla Clásica</div>
                 </div>
 
-                <!-- Slide 2: Vainilla y Chocolate (Marmolado) -->
                 <div class="carousel-slide">
                     <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80" alt="Budín Marmolado">
-                    <div class="slide-info">Vainilla y Chocolate (Marmolado)</div>
+                    <div class="slide-info">Vainilla y Chocolate</div>
                 </div>
 
-                <!-- Slide 3: Limón -->
                 <div class="carousel-slide">
                     <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80" alt="Budín de Limón">
                     <div class="slide-info">Limón Glaseado</div>
                 </div>
 
-                <!-- Slide 4: Naranja -->
                 <div class="carousel-slide">
                     <img src="https://images.unsplash.com/photo-1579954115567-d7240ce0fd09?auto=format&fit=crop&w=800&q=80" alt="Budín de Naranja">
                     <div class="slide-info">Naranja Fresca</div>
@@ -241,30 +258,25 @@
 
             </div>
             
-            <!-- Controles del carrusel -->
             <button class="btn-carousel btn-prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="btn-carousel btn-next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
-    <!-- SECCIÓN: Footer / Contacto / Delivery -->
     <footer class="footer">
-        <p class="delivery-msg">🛵 ¡Llevamos el sabor a tu puerta! Contamos con servicio de delivery en todo <span>Río Cuarto</span>.</p>
+        <p class="delivery-msg">¡Llevamos el sabor a tu puerta! Contamos con servicio de delivery en todo <span>Río Cuarto</span>.</p>
         
         <div class="contact-buttons">
-            <!-- Reemplaza el "1234567890" con tu número real incluyendo código de país (ej: 549...) -->
-            <a href="https://wa.me/5493585179738?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20budines!" target="_blank" class="btn btn-whatsapp">
-                💬 Haz tu pedido por WhatsApp
+            <a href="https://wa.me/1234567890?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20budines!" target="_blank" class="btn btn-whatsapp">
+                Haz tu pedido por WhatsApp
             </a>
             
-            <!-- Reemplaza "tu_usuario" con el usuario de tu emprendimiento -->
-            <a href="https://instagram.com/facuu.amor" target="_blank" class="btn btn-instagram">
-                📸 Síguenos en Instagram
+            <a href="https://instagram.com/imperio.budines" target="_blank" class="btn btn-instagram">
+                Síguenos en Instagram
             </a>
         </div>
     </footer>
 
-    <!-- ================= JAVASCRIPT DEL CARRUSEL ================= -->
     <script>
         let currentSlide = 0;
         const track = document.getElementById('track');
@@ -274,20 +286,16 @@
         function moveSlide(direction) {
             currentSlide = currentSlide + direction;
             
-            // Si llega al final, vuelve al principio
             if (currentSlide >= totalSlides) {
                 currentSlide = 0;
             }
-            // Si va hacia atrás desde el principio, va al último
             if (currentSlide < 0) {
                 currentSlide = totalSlides - 1;
             }
             
-            // Mueve el track multiplicando el ancho por el slide actual
             track.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
-        // Opcional: Hacer que pase solo cada 4 segundos
         setInterval(() => {
             moveSlide(1);
         }, 4000);
